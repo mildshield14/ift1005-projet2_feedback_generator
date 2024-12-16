@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Correction Automatisée des Devoirs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .criterion {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="number"] {
+            width: 100px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        textarea {
+            width: 100%;
+            height: 60px;
+            padding: 5px;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #result h2 {
+            margin-top: 0;
+        }
+        .sub-criteria {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Correction Automatisée des Devoirs</h1>
+
+<form id="correctionForm">
+    <div class="criterion">
+        <label for="name">Nom du groupe: </label>
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="criterion">
+        <label for="fonctionnalite">Fonctionnalité du formulaire de conversion (40%) :</label>
+        <input type="number" id="fonctionnalite" name="fonctionnalite" min="0" max="40" required>
+        <textarea id="comment_fonctionnalite" name="comment_fonctionnalite" placeholder="Commentaires sur la fonctionnalité..."></textarea>
+    </div>
+
+    <div class="criterion">
+        <label for="tableau">Présentation du tableau (15%) :</label>
+        <input type="number" id="tableau" name="tableau" min="0" max="15" required>
+        <textarea id="comment_tableau" name="comment_tableau" placeholder="Commentaires sur la présentation du tableau..."></textarea>
+    </div>
+
+    <div class="criterion">
+        <label for="cartes">Affichage des cartes explicatives (10%) :</label>
+        <input type="number" id="cartes" name="cartes" min="0" max="10" required>
+        <textarea id="comment_cartes" name="comment_cartes" placeholder="Commentaires sur les cartes explicatives..."></textarea>
+    </div>
+
+    <div class="criterion">
+        <label for="visuel">Visuel général, Responsiveness (20%) :</label>
+        <input type="number" id="visuel" name="visuel" min="0" max="20" required>
+        <textarea id="comment_visuel" name="comment_visuel" placeholder="Commentaires sur le visuel général et la responsivité..."></textarea>
+    </div>
+
+    <div class="criterion">
+        <label for="video">Vidéo (5%) :</label>
+        <input type="number" id="video" name="video" min="0" max="5" required>
+        <textarea id="comment_video" name="comment_video" placeholder="Commentaires sur la vidéo..."></textarea>
+    </div>
+
+    <div class="criterion">
+        <label for="qualite">Qualité du code (10%) :</label>
+        <input type="number" id="qualite" name="qualite" min="0" max="10" required>
+        <textarea id="comment_qualite" name="comment_qualite" placeholder="Commentaires sur la qualité du code..."></textarea>
+    </div>
+
+    <div class="criterion">
+        <textarea id="comment_final" name="comment_final" placeholder="Commentaires..."></textarea>
+    </div>
+
+    <button type="button" onclick="generateFeedback()">Générer le Feedback</button>
+</form>
+
+<div id="result" style="display:none;">
+    <h2>Feedback Généré</h2>
+    <div id="feedbackContent"></div>
+    <button onclick="downloadHTML()">Télécharger le Feedback en HTML</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
