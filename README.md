@@ -4,12 +4,7 @@
 ## Table des Matières
 - [Description](#description)
 - [Fonctionnalités](#fonctionnalités)
-- [Installation](#installation)
-- [Utilisation](#utilisation)
-- [Personnalisation](#personnalisation)
-- [Contribuer](#contribuer)
-- [Licence](#licence)
-
+  
 ## Description
 
 L'**Outil de Correction Automatisée des Devoirs** est une application web conçue pour simplifier et accélérer le processus de correction des devoirs étudiants. Cet outil permet d'entrer les scores pour différents critères d'évaluation, d'ajouter des commentaires spécifiques pour chaque critère, de calculer automatiquement la note finale, et de générer un rapport de feedback en HTML prêt à être intégré dans Studium.
